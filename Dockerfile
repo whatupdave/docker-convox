@@ -6,4 +6,4 @@ RUN curl -Ls https://install.convox.com/linux.zip > /tmp/convox.zip && \
     unzip /tmp/convox.zip && \
     rm /tmp/convox.zip
 
-ENTRYPOINT ./convox
+ENTRYPOINT ["./convox"]
