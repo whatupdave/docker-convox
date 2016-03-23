@@ -1,7 +1,9 @@
-FROM alpine:3.3
+FROM ubuntu
+
 WORKDIR /app
-RUN apk -U add curl unzip
+RUN apt-get install -y curl unzip
 RUN curl -Ls https://install.convox.com/linux.zip > /tmp/convox.zip && \
     unzip /tmp/convox.zip && \
     rm /tmp/convox.zip
-CMD convox
+
+ENTRYPOINT ./convox
